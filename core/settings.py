@@ -64,7 +64,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
 
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -203,7 +203,6 @@ STATICFILES_DIRS = (
     os.path.join(CORE_DIR, 'static'),
 )
 
-MIDDLEWARE_CLASSES = ( 'whitenoise.middleware.WhiteNoiseMiddleware', 'django.middleware.locale.LocaleMiddleware',)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
